@@ -37,5 +37,5 @@
           "text": "test message",
           "token": "session-token-from-server"
         }
-      - You can see the message that was sent in the 'message' listener of X of the online clients.
+      - You can see the message that was sent in the 'message' listener of all online clients (except the sender).
     
