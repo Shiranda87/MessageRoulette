@@ -1,0 +1,29 @@
+version: "3.1"
+
+services:
+  db:
+    container_name: mongoDB
+    image: mongo:latest
+    restart: always
+    volumes:
+      - ./MessageRoulette/MessageRouletteData:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE= UsersDB
+    ports:
+      - 27017:27017
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: ./MessageRoulette
+    ports:
+      - '8080:8080'
+    volumes:
+      - /app/node_modules
+      - ./MessageRoulette:/app
+    environment:
+      - "REDIS_HOST=redis"
+    depends_on:
+      - db
+  redis:
+    image: redis:5.0
+    container_name: redis
