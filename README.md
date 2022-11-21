@@ -7,7 +7,7 @@
     - Connect to http://localhost:8080/
 4. On conection you'll get a token from the server (in the 'message-from-server' listener).
 5. You'll need to send this token on each API event to the server (you can see if the token is authenticated on each event in the 'message-from-server' listener).
-6. If you are connected for more then 15 minutes, the token will be revoked. You can use the 'create-session-token' event to get a new token.
+6. If you are connected for more then 15 minutes, the token will be revoked. You can use the 'create-session-token' event to get a new token from the server. You'll see the new token in the 'message-from-server' listener.
 6. API events:
     -  create-session-token:
       - Generates a new token and returns the token in the 'message-from-server' listener.
