@@ -14,7 +14,7 @@
       - The token is valid for 15 minutes.
       - No request fields required.
     - spin:
-      - Sends a message to X random users.
+      - Sends a message to a random user.
       - Request fields JSON example:
         {
           "text": "test message",
@@ -22,7 +22,7 @@
         }
       - You can see the message that was sent in the 'message' listener of one of the online clients.
     - wild:
-      - Sends a message to a random user.
+      - Sends a message to X random users.
       - Request fields JSON example:
         {
           "text": "test message",
